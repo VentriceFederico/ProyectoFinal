@@ -26,103 +26,8 @@
     </header>
     <main>
         <div class="contenedor-main">
-            <div class="productos">
-                <div class="productos-tarjeta">
-                    <img src="./IMG/conectores.jpg" alt="Conectores">
-                    <h3>Patchcord de Fibra Optica</h3>
-                    <div class="productos-tarjeta-p">
-                        <p>Tipo de Fibra:FFF</p>
-                        <p>Direccionamiento: SIMPLEX -- DUPLEX</p>
-                        <p>Conector 1: LC</p>
-                        <p>Conector 2: SC</p>
-                        <p>Longitud: 2 Mts</p>
-                        <p>Cantidad en Stock: 123</p>
-                    </div>
-                    <form>
-                        <input class="cantidad" type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
-                        <input type="submit" id="btn-compra" value="Agregar al carrito" class="btn-compra">
-                    </form>
-                </div>
-                <div class="productos-tarjeta">
-                    <img src="./IMG/conectores.jpg" alt="Conectores">
-                    <h3>Patchcord de Fibra Optica</h3>
-                    <div class="productos-tarjeta-p">
-                        <p>Tipo de Fibra:FFF</p>
-                        <p>Direccionamiento: SIMPLEX -- DUPLEX</p>
-                        <p>Conector 1: LC</p>
-                        <p>Conector 2: SC</p>
-                        <p>Longitud: 2 Mts</p>
-                        <p>Cantidad en Stock: 123</p>
-                    </div>
-                    <form>
-                        <input class="cantidad" type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
-                        <input type="submit" id="btn-compra" value="Agregar al carrito" class="btn-compra">
-                    </form>
-                </div>
-                <div class="productos-tarjeta">
-                    <img src="./IMG/conectores.jpg" alt="Conectores">
-                    <h3>Patchcord de Fibra Optica</h3>
-                    <div class="productos-tarjeta-p">
-                        <p>Tipo de Fibra:FFF</p>
-                        <p>Direccionamiento: SIMPLEX -- DUPLEX</p>
-                        <p>Conector 1: LC</p>
-                        <p>Conector 2: SC</p>
-                        <p>Longitud: 2 Mts</p>
-                        <p>Cantidad en Stock: 123</p>
-                    </div>
-                    <form>
-                        <input class="cantidad" type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
-                        <input type="submit" id="btn-compra" value="Agregar al carrito" class="btn-compra">
-                    </form>
-                </div>
-                <div class="productos-tarjeta">
-                    <img src="./IMG/conectores.jpg" alt="Conectores">
-                    <h3>Patchcord de Fibra Optica</h3>
-                    <div class="productos-tarjeta-p">
-                        <p>Tipo de Fibra:FFF</p>
-                        <p>Direccionamiento: SIMPLEX -- DUPLEX</p>
-                        <p>Conector 1: LC</p>
-                        <p>Conector 2: SC</p>
-                        <p>Longitud: 2 Mts</p>
-                        <p>Cantidad en Stock: 123</p>
-                    </div>
-                    <form>
-                        <input class="cantidad" type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
-                        <input type="submit" id="btn-compra" value="Agregar al carrito" class="btn-compra">
-                    </form>
-                </div>
-                <div class="productos-tarjeta">
-                    <img src="./IMG/conectores.jpg" alt="Conectores">
-                    <h3>Patchcord de Fibra Optica</h3>
-                    <div class="productos-tarjeta-p">
-                        <p>Tipo de Fibra:FFF</p>
-                        <p>Direccionamiento: SIMPLEX -- DUPLEX</p>
-                        <p>Conector 1: LC</p>
-                        <p>Conector 2: SC</p>
-                        <p>Longitud: 2 Mts</p>
-                        <p>Cantidad en Stock: 123</p>
-                    </div>
-                    <form>
-                        <input class="cantidad" type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
-                        <input type="submit" id="btn-compra" value="Agregar al carrito" class="btn-compra">
-                    </form>
-                </div>
-                <div class="productos-tarjeta">
-                    <img src="./IMG/conectores.jpg" alt="Conectores">
-                    <h3>Patchcord de Fibra Optica</h3>
-                    <div class="productos-tarjeta-p">
-                        <p>Tipo de Fibra:FFF</p>
-                        <p>Direccionamiento: SIMPLEX -- DUPLEX</p>
-                        <p>Conector 1: LC</p>
-                        <p>Conector 2: SC</p>
-                        <p>Longitud: 2 Mts</p>
-                        <p>Cantidad en Stock: 123</p>
-                    </div>
-                    <form>
-                        <input class="cantidad" type="number" name="cantidad" id="cantidad" placeholder="Cantidad">
-                        <input type="submit" id="btn-compra" value="Agregar al carrito" class="btn-compra">
-                    </form>
-                </div>
+            <div class="productos" id="productos">
+                
             </div>
         </div>
         <aside>
@@ -133,24 +38,24 @@
                 <div class="filtradoNav-filtros">
                     <label for="tipoFO">Fibra Optica</label>
                     <select name="tipoFo" id="tipoFO">
-                        <option selected>Seleccione el tipo de Fibra</option>
+                        <option value="" selected>Seleccione el tipo de Fibra</option>
                         <option value="SM">SM (Monomodo 9/125)</option>
                         <option value="OM1">OM1 (Multimodo OM1 62,5/125)</option>
                         <option value="OM2">OM2 (Multimodo OM2 50/125)</option>
-                        <option value="OM2">OM3 (Multimodo OM3 50/125)</option>
-                        <option value="OM2">OM4 (Multimodo OM4 50/125)</option>
+                        <option value="OM3">OM3 (Multimodo OM3 50/125)</option>
+                        <option value="OM4">OM4 (Multimodo OM4 50/125)</option>
                     </select>
                     <label for="direccionamiento">Tipo</label>
                     <select name="direccionamiento" id="direccionamiento">
-                        <option selected>Direccionamiento</option>
-                        <option value="SIMPLEX">SIMPLEX</option>
-                        <option value="DUPLEX">DUPLEX</option>
+                        <option value="" selected>Direccionamiento</option>
+                        <option value="SX">SIMPLEX</option>
+                        <option value="DX">DUPLEX</option>
                     </select>
                     <label for="longitud">Longuitud (Mts)</label>
-                    <input type="number" min="0.1" id="longitud" placeholder="Longitud">
+                    <input type="number" min="1" id="longitud" placeholder="Longitud">
                     <label for="conector_1">Conector 1</label>
                     <select name="conector_1" id="conector_1">
-                        <option selected>Conector 1</option>
+                        <option value="" selected>Conector 1</option>
                         <option value="LC/PC">LC/PC</option>
                         <option value="LC/APC">LC/APC</option>
                         <option value="SC/PC">SC/PC</option>
@@ -163,7 +68,7 @@
                     </select>
                     <label for="conector_2">Conector 2</label>
                     <select name="conector_2" id="conector_2">
-                        <option selected>Conector 1</option>
+                        <option value="" selected>Conector 2</option>
                         <option value="LC/PC">LC/PC</option>
                         <option value="LC/APC">LC/APC</option>
                         <option value="SC/PC">SC/PC</option>
@@ -194,6 +99,7 @@
 
     <script src="./JS/popup.js"></script>
     <script src="./JS/login.js"></script>
+    <script src="./JS/index.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </body>

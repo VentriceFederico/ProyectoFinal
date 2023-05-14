@@ -24,22 +24,20 @@ body {
     background-size: cover;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.logo{
+.logo {
     height: 10rem;
 }
 
-.carrito{
+.carrito {
     color: white;
 }
-.carrito:hover{
+.carrito:hover {
     color: #091b26;
 }
-
-
 
 .nav-header {
     background-color: #195973;
@@ -47,7 +45,7 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    img{
+    img {
         height: 8rem;
     }
     ul {
@@ -74,39 +72,39 @@ a{
     text-transform: uppercase;
 }
 
-.filtradoNav{
+.filtradoNav {
     margin: 5rem 2rem;
     display: flex;
     flex-direction: column;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     border-radius: 10px;
     border: solid 1px #02090d;
-    &-title{
+    &-title {
         text-align: center;
         font-size: 2rem;
         margin: 1rem 0;
         border-bottom: solid 1px #02090d;
     }
-    &-filtros{
+    &-filtros {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
         margin-bottom: 1rem;
         padding: 1rem;
-        label{
+        label {
             font-size: 1.8rem;
             color: #091b26;
             font-weight: 700;
         }
-        select{
+        select {
             border: none;
             border-radius: 5px;
             padding: 1rem;
             border: solid 1px #02090d;
         }
-        input{
+        input {
             border: none;
             border-radius: 5px;
             padding: 1rem;
@@ -137,7 +135,7 @@ a{
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    &-popup.active{
+    &-popup.active {
         opacity: 1;
         transform: scale(1);
     }
@@ -149,7 +147,7 @@ a{
         text-align: center;
         width: 50rem;
         opacity: 0;
-        transition: .3s ease all;
+        transition: 0.3s ease all;
         transform: scale(0.7);
         &-form {
             &-inputs {
@@ -200,15 +198,15 @@ a{
     }
 }
 
-.active{
+.active {
     visibility: visible;
 }
 
-main{
+main {
     display: flex;
 }
 
-.aside{
+.aside {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -216,32 +214,32 @@ main{
     position: sticky;
     top: 10%;
     padding: 3rem;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     border-radius: 10px;
     border: solid 2px #02090d;
     height: 73rem;
-    &-title{
+    &-title {
         text-align: center;
         font-size: 2rem;
         margin: 1rem 0;
         border-bottom: solid 1px #02090d;
     }
-    &-form{
+    &-form {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        label{
+        label {
             font-size: 1.8rem;
             color: #091b26;
             font-weight: 700;
         }
-        select{
+        select {
             border: none;
             border-radius: 5px;
             padding: 1rem;
             border: solid 1px #02090d;
         }
-        input{
+        input {
             border: none;
             border-radius: 5px;
             padding: 1rem;
@@ -250,7 +248,7 @@ main{
     }
 }
 
-.btn-add-producto{
+.btn-add-producto {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -275,16 +273,20 @@ main{
             padding: 2rem;
             width: 40rem;
             border-radius: 10px;
-        &-p{
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin: 2rem;
-            p{
-                font-size: 1.7rem;
-                font-weight: 700;
+
+            &-p {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin: 2rem;
+                p {
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                }
+                h2 {
+                    font-size: 2rem;
+                }
             }
-        }
             img {
                 width: 100%;
                 border: solid 1px #000;
@@ -302,7 +304,7 @@ main{
                 border-radius: 5px;
                 display: flex;
                 flex-direction: column;
-                label{
+                label {
                     font-size: 2rem;
                     text-align: center;
                 }
@@ -317,7 +319,7 @@ main{
                     text-transform: uppercase;
                     cursor: pointer;
                 }
-                .cantidad{
+                .cantidad {
                     border: none;
                     border-radius: 5px;
                     padding: 1.2rem;
@@ -328,15 +330,15 @@ main{
     }
 }
 
-.sticky{
+.sticky {
     position: sticky;
     top: 10%;
 }
 
-.vendedor{
+.vendedor {
     flex-direction: initial;
 }
 
-.filter{
+.filter {
     display: none;
 }

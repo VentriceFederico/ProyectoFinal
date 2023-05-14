@@ -74,7 +74,7 @@ a {
   margin: 5rem 2rem;
   display: flex;
   flex-direction: column;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 10px;
   border: solid 1px #02090d;
 }
@@ -207,7 +207,7 @@ main {
   position: sticky;
   top: 10%;
   padding: 3rem;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 10px;
   border: solid 2px #02090d;
   height: 73rem;
@@ -278,6 +278,9 @@ main {
 .contenedor-main .productos-tarjeta-p p {
   font-size: 1.7rem;
   font-weight: 700;
+}
+.contenedor-main .productos-tarjeta-p h2 {
+  font-size: 2rem;
 }
 .contenedor-main .productos-tarjeta img {
   width: 100%;
