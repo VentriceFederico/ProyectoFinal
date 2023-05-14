@@ -379,7 +379,7 @@ function filtrado(patchcords) {
         filtros.long_filt = e.target.value;
         aplicarFiltros();
     });
-    
+
     const filter_tipo_conector_1 = document.getElementById("conector_1");
     filter_tipo_conector_1.addEventListener('input', e => {
         filtros.conector_1_filt = e.target.value;
