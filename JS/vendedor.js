@@ -29,7 +29,7 @@ class Patchcord {
         this.direccionamiento = direccionamiento;
         this.conector_1 = conector_1;
         this.conector_2 = conector_2;
-        this.mts = parseFloat(mts);
+        this.mts = parseInt(mts);
         this.cant = parseInt(cant);
         this.id = id;
         this.precio = precio;
@@ -213,7 +213,6 @@ patchcordsLiterales.forEach((patch) => {
     ))
 })
 
-console.log(patchcords);
 
 function agregar_patch() {
     const btn_add_producto = document.getElementById("add_producto");
@@ -263,7 +262,6 @@ function agregar_patch() {
             }).showToast()
         }
     })
-    console.log(patchcords);
 }
 
 function ver_patch(patchcord) {
@@ -295,6 +293,7 @@ function imprimir_patch(patchcords) {
     patchcords.forEach(patch => {
         ver_patch(patch);
     });
+
 }
 
 function editar_patch(id) {
@@ -304,7 +303,7 @@ function editar_patch(id) {
 
 
     btn_add_cant.addEventListener("input", () => {
-        new_cant = btn_add_cant.value;    
+        new_cant = btn_add_cant.value;
         if (new_cant < 5) {
             Toastify({
                 text: "Se Actualizo el producto.\nStock menor a 5 unidades!!",
@@ -331,5 +330,69 @@ function validar_patch(tipo_fo, direccionamiento, conector_1, conector_2) {
     }
 }
 
+function filtrado(patchcords) {
+    let filtros = {
+        tipo_fo_filt: '',
+        tipo_direccionamiento_filt: '',
+        long_filt: '',
+        conector_1_filt: '',
+        conector_2_filt: '',
+    };
+
+    function aplicarFiltros() {
+        const arr_filtrado = patchcords.filter(
+            el =>
+                el.tipo_fo.includes(filtros.tipo_fo_filt) &&
+                el.direccionamiento.includes(filtros.tipo_direccionamiento_filt) &&
+                el.mts.toString().includes(filtros.long_filt) &&
+                el.conector_1.includes(filtros.conector_1_filt) &&
+                el.conector_2.includes(filtros.conector_2_filt)
+        );
+        console.log();
+        const tarjeta_patch = document
+            .querySelectorAll('.productos-tarjeta')
+            .forEach(element => element.classList.add('filter'));
+
+        let tarjeta_patch_filter;
+        for (const filtrado of arr_filtrado) {
+            tarjeta_patch_filter = document.querySelector(
+                '#productos-tarjeta-' + filtrado.id
+            );
+            tarjeta_patch_filter.classList.remove('filter');
+        }
+    }
+
+    const filter_tipo_fo = document.getElementById('tipoFO');
+    filter_tipo_fo.addEventListener('input', e => {
+        filtros.tipo_fo_filt = e.target.value;
+        aplicarFiltros();
+    });
+
+    const filter_tipo_direccionamiento = document.getElementById('direccionamiento');
+    filter_tipo_direccionamiento.addEventListener('input', e => {
+        filtros.tipo_direccionamiento_filt = e.target.value;
+        aplicarFiltros();
+    });
+
+    const filter_tipo_long = document.getElementById('longitud');
+    filter_tipo_long.addEventListener('input', e => {
+        filtros.long_filt = e.target.value;
+        aplicarFiltros();
+    });
+    
+    const filter_tipo_conector_1 = document.getElementById("conector_1");
+    filter_tipo_conector_1.addEventListener('input', e => {
+        filtros.conector_1_filt = e.target.value;
+        aplicarFiltros();
+    });
+
+    const filter_tipo_conector_2 = document.getElementById("conector_2");
+    filter_tipo_conector_2.addEventListener('input', e => {
+        filtros.conector_2_filt = e.target.value;
+        aplicarFiltros();
+    });
+}
+
 agregar_patch();
 imprimir_patch(patchcords);
+filtrado(patchcords);

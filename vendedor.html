@@ -32,24 +32,24 @@
                 <div class="filtradoNav-filtros vendedor">
                     <label for="tipoFO">Fibra Optica</label>
                     <select name="tipoFo" id="tipoFO">
-                        <option selected>Seleccione el tipo de Fibra</option>
+                        <option value="" selected>Seleccione el tipo de Fibra</option>
                         <option value="SM">SM (Monomodo 9/125)</option>
                         <option value="OM1">OM1 (Multimodo OM1 62,5/125)</option>
                         <option value="OM2">OM2 (Multimodo OM2 50/125)</option>
-                        <option value="OM2">OM3 (Multimodo OM3 50/125)</option>
-                        <option value="OM2">OM4 (Multimodo OM4 50/125)</option>
+                        <option value="OM3">OM3 (Multimodo OM3 50/125)</option>
+                        <option value="OM4">OM4 (Multimodo OM4 50/125)</option>
                     </select>
                     <label for="direccionamiento">Tipo</label>
                     <select name="direccionamiento" id="direccionamiento">
-                        <option selected>Direccionamiento</option>
-                        <option value="SIMPLEX">SIMPLEX</option>
-                        <option value="DUPLEX">DUPLEX</option>
+                        <option value="" selected>Direccionamiento</option>
+                        <option value="SX">SIMPLEX</option>
+                        <option value="DX">DUPLEX</option>
                     </select>
                     <label for="longitud">Longuitud (Mts)</label>
-                    <input type="number" min="0.1" id="longitud" placeholder="Longitud">
+                    <input type="number" min="0" id="longitud" placeholder="Longitud">
                     <label for="conector_1">Conector 1</label>
                     <select name="conector_1" id="conector_1">
-                        <option selected>Conector 1</option>
+                        <option value="" selected>Conector 1</option>
                         <option value="LC/PC">LC/PC</option>
                         <option value="LC/APC">LC/APC</option>
                         <option value="SC/PC">SC/PC</option>
@@ -62,7 +62,7 @@
                     </select>
                     <label for="conector_2">Conector 2</label>
                     <select name="conector_2" id="conector_2">
-                        <option selected>Conector 1</option>
+                        <option value="" selected>Conector 2</option>
                         <option value="LC/PC">LC/PC</option>
                         <option value="LC/APC">LC/APC</option>
                         <option value="SC/PC">SC/PC</option>
@@ -98,8 +98,8 @@
                 <label for="add_FO_type">Tipo</label>
                 <select name="add_FO_type" id="add_FO_type" required>
                     <option selected disabled>Direccionamiento</option>
-                    <option value="SIMPLEX">SIMPLEX</option>
-                    <option value="DUPLEX">DUPLEX</option>
+                    <option value="SX">SIMPLEX</option>
+                    <option value="DX">DUPLEX</option>
                 </select>
                 <label for="add_FO_long">Longuitud (Mts)</label>
                 <input name="add_FO_long" type="number" min="1" id="add_FO_long" placeholder="Longuitud" required>

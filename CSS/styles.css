@@ -326,4 +326,8 @@ main {
 
 .vendedor {
   flex-direction: initial;
+}
+
+.filter {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
