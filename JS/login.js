@@ -4,7 +4,16 @@ formulario_login.addEventListener("submit", (e) => {
     if(login()){
         e.preventDefault();
         window.location.replace('vendedor.html');
-        console.log("Ingresaste");
+    }
+    else{
+        Toastify({
+                text: "Usuario o contraseña incorrectos.\nPorfavor Vuelva a ingresar",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #FE0C0D, #000000)",
+                    color: "#FFF",
+                },
+            }).showToast()
     }
 })
 function login() {
