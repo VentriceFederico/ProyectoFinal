@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="https://kit.fontawesome.com/f3c11c9d85.js" crossorigin="anonymous"></script>
+    <title>Entrega Final!!</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-header">
+            <a href="index.html">
+                <img class="logo" src="./IMG/optipatch.png" alt="logo">
+            </a>
+            <ul>
+                <li><a href="#">Pedidos de Patchcords</a></li>
+                <li><a href="#">Ventas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <nav class="filtradoNav" id="filtro">
+                <div class="filtradoNav-title">
+                    <h2>Filtros</h2>
+                </div>
+                <div class="filtradoNav-filtros vendedor">
+                    <label for="tipoFO">Fibra Optica</label>
+                    <select name="tipoFo" id="tipoFO">
+                        <option selected>Seleccione el tipo de Fibra</option>
+                        <option value="SM">SM (Monomodo 9/125)</option>
+                        <option value="OM1">OM1 (Multimodo OM1 62,5/125)</option>
+                        <option value="OM2">OM2 (Multimodo OM2 50/125)</option>
+                        <option value="OM2">OM3 (Multimodo OM3 50/125)</option>
+                        <option value="OM2">OM4 (Multimodo OM4 50/125)</option>
+                    </select>
+                    <label for="direccionamiento">Tipo</label>
+                    <select name="direccionamiento" id="direccionamiento">
+                        <option selected>Direccionamiento</option>
+                        <option value="SIMPLEX">SIMPLEX</option>
+                        <option value="DUPLEX">DUPLEX</option>
+                    </select>
+                    <label for="longitud">Longuitud (Mts)</label>
+                    <input type="number" min="0.1" id="longitud" placeholder="Longitud">
+                    <label for="conector_1">Conector 1</label>
+                    <select name="conector_1" id="conector_1">
+                        <option selected>Conector 1</option>
+                        <option value="LC/PC">LC/PC</option>
+                        <option value="LC/APC">LC/APC</option>
+                        <option value="SC/PC">SC/PC</option>
+                        <option value="SC/APC">SC/APC</option>
+                        <option value="FC/PC">FC/PC</option>
+                        <option value="FC/APC">FC/APC</option>
+                        <option value="ST/PC">ST/PC</option>
+                        <option value="MTRJ">MTRJ</option>
+                        <option value="E2000/APC">E2000/APC</option>
+                    </select>
+                    <label for="conector_2">Conector 2</label>
+                    <select name="conector_2" id="conector_2">
+                        <option selected>Conector 1</option>
+                        <option value="LC/PC">LC/PC</option>
+                        <option value="LC/APC">LC/APC</option>
+                        <option value="SC/PC">SC/PC</option>
+                        <option value="SC/APC">SC/APC</option>
+                        <option value="FC/PC">FC/PC</option>
+                        <option value="FC/APC">FC/APC</option>
+                        <option value="ST/PC">ST/PC</option>
+                        <option value="MTRJ">MTRJ</option>
+                        <option value="E2000/APC">E2000/APC</option>
+                    </select>
+                </div>
+            </nav>
+
+            <div class="contenedor-main">
+                <div class="productos" id="productos">
+                    
+                </div>
+
+            </div>
+        </div>
+        <aside class="aside">
+            <h3 class="aside-title">Agregar Productos</h3>
+            <form class="aside-form" id="add_producto">
+                <label for="add_FO">Fibra Optica</label>
+                <select name="add_FO" id="add_FO" required>\
+                    <option selected>Seleccione el tipo de Fibra</option>
+                    <option value="SM">SM (Monomodo 9/125)</option>
+                    <option value="OM1">OM1 (Multimodo OM1 62,5/125)</option>
+                    <option value="OM2">OM2 (Multimodo OM2 50/125)</option>
+                    <option value="OM3">OM3 (Multimodo OM3 50/125)</option>
+                    <option value="OM4">OM4 (Multimodo OM4 50/125)</option>
+                </select>
+                <label for="add_FO_type">Tipo</label>
+                <select name="add_FO_type" id="add_FO_type" required>
+                    <option selected>Direccionamiento</option>
+                    <option value="SIMPLEX">SIMPLEX</option>
+                    <option value="DUPLEX">DUPLEX</option>
+                </select>
+                <label for="add_FO_long">Longuitud (Mts)</label>
+                <input name="add_FO_long" type="number" min="1" id="add_FO_long" placeholder="Longuitud" required>
+                <label for="add_FO_conec_1">Conector 1</label>
+                <select name="add_FO_conec_1" id="add_FO_conec_1" required>
+                    <option selected>Conector 1</option>
+                    <option value="LC/PC">LC/PC</option>
+                    <option value="LC/APC">LC/APC</option>
+                    <option value="SC/PC">SC/PC</option>
+                    <option value="SC/APC">SC/APC</option>
+                    <option value="FC/PC">FC/PC</option>
+                    <option value="FC/APC">FC/APC</option>
+                    <option value="ST/PC">ST/PC</option>
+                    <option value="MTRJ">MTRJ</option>
+                    <option value="E2000/APC">E2000/APC</option>
+                </select>
+                <label for="add_FO_conec_2">Conector 2</label>
+                <select name="add_FO_conec_2" id="add_FO_conec_2" required>
+                    <option selected>Conector 2</option>
+                    <option value="LC/PC">LC/PC</option>
+                    <option value="LC/APC">LC/APC</option>
+                    <option value="SC/PC">SC/PC</option>
+                    <option value="SC/APC">SC/APC</option>
+                    <option value="FC/PC">FC/PC</option>
+                    <option value="FC/APC">FC/APC</option>
+                    <option value="ST/PC">ST/PC</option>
+                    <option value="MTRJ">MTRJ</option>
+                    <option value="E2000/APC">E2000/APC</option>
+                </select>
+                <label for="add_FO_cant">Cantidad</label>
+                <input name="add_FO_cant" type="number" min="1" placeholder="Cantidad" id="add_FO_cant">
+                <input class="btn-add-producto" type="submit" value="Añadir Producto">
+            </form>
+        </aside>
+    <script src="./JS/vendedor.js"></script>
+</body>
+
+</html>
