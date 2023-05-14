@@ -1,5 +1,9 @@
 # ProyectoFinal
 Este es el proyecto final de JS
 Para logearse ingresar con:
-                            pass:  admin
+
+                           
+                           pass:  admin
+                           
                             email: admin@admin.com 
+                            
