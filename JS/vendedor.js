@@ -224,23 +224,44 @@ function agregar_patch() {
         let id = parseInt((localStorage.getItem("id"))) || 0;
 
         const datos = e.target.children;
-        const patchcord = new Patchcord(
-            datos["add_FO"].value,
-            datos["add_FO_type"].value,
-            datos["add_FO_conec_1"].value,
-            datos["add_FO_conec_2"].value,
-            datos["add_FO_long"].value,
-            datos["add_FO_cant"].value,
-            id,
-            0,
-        )
-        patchcords.push(patchcord);
-        patchcord.patchcordPrecio(patchcord.conector_1, patchcord.conector_2, patchcord.mts, patchcord.tipo_fo, patchcord.direccionamiento);
-        id++;
-        localStorage.setItem("patchcords", JSON.stringify(patchcords));
-        localStorage.setItem("id", id);
-        btn_add_producto.reset();
-        ver_patch(patchcord);
+
+        if (validar_patch(datos["add_FO"].value, datos["add_FO_type"].value, datos["add_FO_conec_1"].value,
+            datos["add_FO_conec_2"].value)) {
+            const patchcord = new Patchcord(
+                datos["add_FO"].value,
+                datos["add_FO_type"].value,
+                datos["add_FO_conec_1"].value,
+                datos["add_FO_conec_2"].value,
+                datos["add_FO_long"].value,
+                datos["add_FO_cant"].value,
+                id,
+                0,
+            )
+            patchcords.push(patchcord);
+            patchcord.patchcordPrecio(patchcord.conector_1, patchcord.conector_2, patchcord.mts, patchcord.tipo_fo, patchcord.direccionamiento);
+            id++;
+            localStorage.setItem("patchcords", JSON.stringify(patchcords));
+            localStorage.setItem("id", id);
+            btn_add_producto.reset();
+            Toastify({
+                text: "Producto Ingresado.",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    color: "#000",
+                },
+            }).showToast()
+            ver_patch(patchcord);
+        }
+        else {
+            Toastify({
+                text: "Producto Mal Ingresado.\nVuelva a ingresarlo.",
+                duration: 3000,
+                style: {
+                    background: "linear-gradient(to right, #FE0C0D, #000000)",
+                },
+            }).showToast()
+        }
     })
     console.log(patchcords);
 }
@@ -292,6 +313,15 @@ function editar_patch(id) {
             duration: 3000
         }).showToast()
     })
+}
+
+function validar_patch(tipo_fo, direccionamiento, conector_1, conector_2) {
+    if (tipo_fo == "Seleccione el tipo de Fibra" || direccionamiento == "Direccionamiento" || conector_1 == "Conector 1" || conector_2 == "Conector 2") {
+        return false;
+    }
+    else {
+        return true;
+    }
 }
 
 agregar_patch();
