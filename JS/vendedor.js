@@ -30,7 +30,7 @@ class Patchcord {
         this.conector_1 = conector_1;
         this.conector_2 = conector_2;
         this.mts = parseFloat(mts);
-        this.cant = cant;
+        this.cant = parseInt(cant);
         this.id = id;
         this.precio = precio;
     }
@@ -283,8 +283,8 @@ function ver_patch(patchcord) {
                                 <p>Precio: $${patchcord.precio} (USD)</p>
                                 </div>
                                 <form id="form-editar-${patchcord.id}">
-                                <label for = "cantidad">Stock</label>
-                                <input class="cantidad" type="number" name="cantidad" id="cantidad-${patchcord.id}" placeholder=${patchcord.cant} min= "0">
+                                <label for = "cantidad-${patchcord.id}">Stock</label>
+                                <input class="cantidad" type="number" name="cantidad" id="cantidad-${patchcord.id}" value=${patchcord.cant} min= "0">
                                 </form>
                                 `
     contenedorProductos.append(tarjetaProducto);
@@ -298,20 +298,27 @@ function imprimir_patch(patchcords) {
 }
 
 function editar_patch(id) {
-    let new_cant;
     const btn_add_cant = document.getElementById("cantidad-" + id);
-    btn_add_cant.addEventListener("input", () => {
-        new_cant = btn_add_cant.value;
-        const index = patchcords.findIndex((e) => e.id == id);
+    const index = patchcords.findIndex((e) => e.id == id);
+    let new_cant = patchcords[index].cant;
 
+
+    btn_add_cant.addEventListener("input", () => {
+        new_cant = btn_add_cant.value;    
+        if (new_cant < 5) {
+            Toastify({
+                text: "Se Actualizo el producto.\nStock menor a 5 unidades!!",
+                duration: 3000
+            }).showToast()
+        } else {
+            Toastify({
+                text: "Se Actualizo el producto",
+                duration: 3000
+            }).showToast()
+        }
         patchcords[index].cant = new_cant;
 
         localStorage.setItem("patchcords", JSON.stringify(patchcords));
-
-        Toastify({
-            text: "Se Actualizo el producto",
-            duration: 3000
-        }).showToast()
     })
 }
 
