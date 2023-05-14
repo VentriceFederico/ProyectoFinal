@@ -197,9 +197,25 @@ class Patchcord {
     }
 }
 
-const patchcords = (JSON.parse(localStorage.getItem("patchcords")) ?? []);
+const patchcordsLiterales = (JSON.parse(localStorage.getItem("patchcords")) ?? []);
+const patchcords = [];
 
-function agregar_producto() {
+patchcordsLiterales.forEach((patch) => {
+    patchcords.push(new Patchcord(
+        patch.tipo_fo,
+        patch.direccionamiento,
+        patch.conector_1,
+        patch.conector_2,
+        patch.mts,
+        patch.cant,
+        patch.id,
+        patch.precio
+    ))
+})
+
+console.log(patchcords);
+
+function agregar_patch() {
     const btn_add_producto = document.getElementById("add_producto");
 
     btn_add_producto.addEventListener("submit", (e) => {
@@ -224,12 +240,12 @@ function agregar_producto() {
         localStorage.setItem("patchcords", JSON.stringify(patchcords));
         localStorage.setItem("id", id);
         btn_add_producto.reset();
-        ver_producto(patchcord);
+        ver_patch(patchcord);
     })
     console.log(patchcords);
 }
 
-function ver_producto(patchcord) {
+function ver_patch(patchcord) {
     const contenedorProductos = document.getElementById("productos");
     const tarjetaProducto = document.createElement("div");
     tarjetaProducto.className = "productos-tarjeta";
@@ -245,19 +261,38 @@ function ver_producto(patchcord) {
                                 <p>Longitud: ${patchcord.mts} Mts</p>
                                 <p>Precio: $${patchcord.precio} (USD)</p>
                                 </div>
-                                <form>
+                                <form id="form-editar-${patchcord.id}">
                                 <label for = "cantidad">Stock</label>
-                                <input class="cantidad" type="number" name="cantidad" id="cantidad-${patchcord.id}" placeholder=${patchcord.cant}>
+                                <input class="cantidad" type="number" name="cantidad" id="cantidad-${patchcord.id}" placeholder=${patchcord.cant} min= "0">
                                 </form>
                                 `
     contenedorProductos.append(tarjetaProducto);
+    editar_patch(patchcord.id);
 }
 
 function imprimir_patch(patchcords) {
     patchcords.forEach(patch => {
-        ver_producto(patch);
+        ver_patch(patch);
     });
 }
 
-agregar_producto();
+function editar_patch(id) {
+    let new_cant;
+    const btn_add_cant = document.getElementById("cantidad-" + id);
+    btn_add_cant.addEventListener("input", () => {
+        new_cant = btn_add_cant.value;
+        const index = patchcords.findIndex((e) => e.id == id);
+
+        patchcords[index].cant = new_cant;
+
+        localStorage.setItem("patchcords", JSON.stringify(patchcords));
+
+        Toastify({
+            text: "Se Actualizo el producto",
+            duration: 3000
+        }).showToast()
+    })
+}
+
+agregar_patch();
 imprimir_patch(patchcords);
