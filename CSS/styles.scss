@@ -263,6 +263,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    &-barra{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.8rem;
+        border-bottom: solid 2px #02090d;
+        margin: 0 5rem 5rem 5rem;
+        padding-bottom: 2rem;
+    }
     &-hero{
         display: flex;
         justify-content: center;
