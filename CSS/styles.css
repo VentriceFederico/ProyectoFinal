@@ -36,15 +36,15 @@ a {
 }
 
 .carrito:hover {
-  color: #091b26;
+  color: #195973;
 }
 
 .nav-header {
-  background-color: #195973;
+  background-color: #091b26;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 10rem;
 }
 .nav-header img {
   height: 8rem;
@@ -61,7 +61,7 @@ a {
   font-size: 2rem;
 }
 .nav-header ul li a:hover {
-  color: #091b26;
+  color: #195973;
 }
 
 .title {
@@ -113,14 +113,14 @@ a {
 
 .btn-abrir-poppup {
   border: none;
-  background-color: #195973;
+  background-color: #091b26;
   cursor: pointer;
   color: white;
   font-size: 2rem;
 }
 
 .btn-abrir-poppup:hover {
-  color: #091b26;
+  color: #195973;
 }
 
 .overlay {
@@ -254,7 +254,29 @@ main {
 .contenedor-main {
   margin: 5rem 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+}
+.contenedor-main-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+  gap: 5rem;
+}
+.contenedor-main-hero img {
+  height: 17rem;
+}
+.contenedor-main-info {
+  text-align: center;
+  margin: 5rem 20rem;
+  font-size: 3.4rem;
+  border: solid 2px #f8f8f8;
+  background-color: #091b26;
+  border-radius: 10px;
+  color: #fafafa;
+  padding: 5rem;
+  letter-spacing: 3px;
 }
 .contenedor-main .productos {
   margin: 0 5rem;
