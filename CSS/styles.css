@@ -369,8 +369,10 @@ main {
 .main-carrito {
   display: flex;
   margin: 10rem;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 5rem;
 }
 
 .productos {
@@ -392,4 +394,21 @@ main {
   width: 100%;
   border: solid 1px #000;
   border-radius: 5px;
+}
+
+.lista-carrito {
+  border: solid 2px #02090d;
+  border-collapse: collapse;
+}
+.lista-carrito img {
+  width: 20rem;
+  height: 10rem;
+  border: solid 2px #02090d;
+  border-radius: 10px;
+}
+.lista-carrito tr th,
+.lista-carrito tr td {
+  border: solid 1px #02090d;
+  padding: 10px;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
