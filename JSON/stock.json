@@ -1,0 +1,72 @@
+[
+    {
+        "tipo_fo": "SM",
+        "direccionamiento": "DX",
+        "conector_1": "LC/PC",
+        "conector_2": "LC/PC",
+        "mts": 2,
+        "cant": 24,
+        "id": 0,
+        "precio": 16.9
+    },
+    {
+        "tipo_fo": "OM2",
+        "direccionamiento": "DX",
+        "conector_1": "SC/PC",
+        "conector_2": "FC/PC",
+        "mts": 2,
+        "cant": 12,
+        "id": 1,
+        "precio": 17.3
+    },
+    {
+        "tipo_fo": "OM1",
+        "direccionamiento": "DX",
+        "conector_1": "SC/PC",
+        "conector_2": "ST/PC",
+        "mts": 1,
+        "cant": 12,
+        "id": 2,
+        "precio": 15.85
+    },
+    {
+        "tipo_fo": "OM3",
+        "direccionamiento": "DX",
+        "conector_1": "LC/PC",
+        "conector_2": "LC/PC",
+        "mts": 2,
+        "cant": 22,
+        "id": 3,
+        "precio": 18.2
+    },
+    {
+        "tipo_fo": "OM4",
+        "direccionamiento": "DX",
+        "conector_1": "LC/PC",
+        "conector_2": "SC/PC",
+        "mts": 3,
+        "cant": 12,
+        "id": 4,
+        "precio": 21.9
+    },
+    {
+        "tipo_fo": "SM",
+        "direccionamiento": "DX",
+        "conector_1": "SC/PC",
+        "conector_2": "FC/PC",
+        "mts": 3,
+        "cant": 34,
+        "id": 6,
+        "precio": 19.05
+    },
+    {
+        "tipo_fo": "OM1",
+        "direccionamiento": "DX",
+        "conector_1": "ST/PC",
+        "conector_2": "ST/PC",
+        "mts": 3,
+        "cant": 24,
+        "id": 7,
+        "precio": 17.4
+    }
+]

@@ -137,12 +137,11 @@ function agregar_carrito(id) {
                 color: "#000",
             },
         }).showToast()
-        // setTimeout(() => {
-        //     location.href = '../carrito.html'
-        // },2000)
+        setTimeout(() => {
+            location.href = '../carrito.html'
+        }, 2000)
     })
 }
-
 ver_patch();
 filtrado(patchcords_index);
 

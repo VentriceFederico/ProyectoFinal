@@ -14,7 +14,6 @@ patchcordsLiterales.forEach((patch) => {
     ))
 })
 
-
 function agregar_patch() {
     const btn_add_producto = document.getElementById("add_producto");
 
@@ -22,7 +21,6 @@ function agregar_patch() {
         e.preventDefault();
 
         let id = parseInt((localStorage.getItem("id"))) || 0;
-
         const datos = e.target.children;
 
         if (validar_patch(datos["add_FO"].value, datos["add_FO_type"].value, datos["add_FO_conec_1"].value,
