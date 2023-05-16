@@ -263,7 +263,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    &-barra{
+    &-barra {
         text-align: center;
         text-transform: uppercase;
         font-weight: 700;
@@ -272,17 +272,17 @@ main {
         margin: 0 5rem 5rem 5rem;
         padding-bottom: 2rem;
     }
-    &-hero{
+    &-hero {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 5rem;
         gap: 5rem;
-        img{
+        img {
             height: 17rem;
         }
     }
-    &-info{
+    &-info {
         text-align: center;
         margin: 5rem 20rem;
         font-size: 3.4rem;
@@ -372,4 +372,31 @@ main {
 
 .filter {
     display: none;
+}
+.main-carrito{
+    display: flex;
+    margin: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    &-tarjeta {
+        border: solid 3px #091b26;
+        padding: 2rem;
+        width: 40rem;
+        border-radius: 10px;
+    }
+    p {
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+
+    img {
+        width: 100%;
+        border: solid 1px #000;
+        border-radius: 5px;
+    }
 }

@@ -364,4 +364,32 @@ main {
 
 .filter {
   display: none;
+}
+
+.main-carrito {
+  display: flex;
+  margin: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+.productos-tarjeta {
+  border: solid 3px #091b26;
+  padding: 2rem;
+  width: 40rem;
+  border-radius: 10px;
+}
+.productos p {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.productos img {
+  width: 100%;
+  border: solid 1px #000;
+  border-radius: 5px;
 }/*# sourceMappingURL=styles.css.map */
