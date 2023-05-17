@@ -92,12 +92,13 @@ function comprar_carrito() {
         Swal.fire({
             icon: 'success',
             title: 'Gracias Por Su Compra',
-            text: 'Su total fue de $' + total,
+            text: 'Su total fue de $' + Number(total.toFixed(2)),
+            showConfirmButton: false,
         });
         localStorage.setItem("productos_carrito", JSON.stringify([]));
         setTimeout(()=>{
             location.href = "../index.html"
-            },2500);
+            },3750);
     })
 }
 
