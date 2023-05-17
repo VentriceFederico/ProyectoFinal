@@ -27,10 +27,10 @@ function ver_patch_carrito(patchCarrito) {
 }
 
 function imprimir_patch_carrito() {
-const carrito_visible = document.querySelector("#carrito");
-const botones_visible = document.querySelector(".botones");
+    const carrito_visible = document.querySelector("#carrito");
+    const botones_visible = document.querySelector(".botones");
     if (productos_carrito.length == 0) {
-        
+
         carrito_visible.classList.add("filter");
         botones_visible.classList.add("filter");
         Swal.fire({
@@ -72,5 +72,35 @@ function borrar_patch_carrito() {
     })
 }
 
+function comprar_carrito() {
+    let total = 0
+    patchcords.forEach(patch => {
+        const index = productos_carrito.findIndex((id) => id.id == patch.id)
+        console.log("Patch:\n" + patch.id);
+        console.log("Index de producto carrito:\n" + index);
+        if (index >= 0) {
+            const num = productos_carrito[index].cant * patch.precio;
+            total = num + total;
+            console.log("NUM:\n" + num);
+            console.log("TOTAL:\n" + total)
+        }
+    })
+
+    const btnComprar = document.getElementById("btnComprar");
+
+    btnComprar.addEventListener("click", () => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Gracias Por Su Compra',
+            text: 'Su total fue de $' + total,
+        });
+        localStorage.setItem("productos_carrito", JSON.stringify([]));
+        setTimeout(()=>{
+            location.href = "../index.html"
+            },2500);
+    })
+}
+
 imprimir_patch_carrito();
 borrar_patch_carrito();
+comprar_carrito();

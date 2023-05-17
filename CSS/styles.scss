@@ -380,6 +380,22 @@ main {
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    .btn{
+        border: none;
+        margin: 2rem;
+        padding: 2rem;
+        border-radius: 10px;
+        background-color: #091b26;
+        color: #f8f8f8;
+        text-transform: uppercase;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+    .btn:hover{
+        background-color: #195973;
+        cursor: pointer;
+    }
 }
 .productos {
     display: grid;
@@ -419,6 +435,7 @@ main {
             border: solid 1px #02090d;
             padding: 10px;
             text-align: center;
+            font-size: 2rem;
         }
     }
 }
